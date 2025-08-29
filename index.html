@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+    <title>Icon Template Square</title>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.0/buzz.min.js"></script>
+		
+        <style>
+			body {background-color: #222225}
+			
+            .row{
+                width:720px;
+                margin: 10px auto 10px auto ;
+            }
+            .image-container {
+                display: table-cell;
+                vertical-align: middle;
+                padding:20px;
+            }		
+        </style>
+    </head>
+
+    <body>
+
+        <div class="row">
+            <div class="image-container"><img id="rain" src="img/Rain.png" height="200" width="200" onmouseover= "this.src='img/Rain Alt.png';" onmouseout= "this.src='img/Rain.png';"/></div>
+            <div class="image-container"><img id="waterfall" src="img/Waterfall.png" height="200" width="200" onmouseover= "this.src='img/Waterfall Alt.png';" onmouseout= "this.src='img/Waterfall.png';"/></div>
+            <div class="image-container"><img id="breeze" src="img/Breeze.png" height="200" width="200" onmouseover= "this.src='img/Breeze Alt.png';" onmouseout= "this.src='img/Breeze.png';"/></div>
+        </div>
+
+        <div class="row">
+            <div class="image-container"><img id="noise" src="img/Noise.png" height="200" width="200" onmouseover= "this.src='img/Noise Alt.png';" onmouseout= "this.src='img/Noise.png';"/></div>
+            <div class="image-container"><img id="fire" src="img/Bonfire.png" height="200" width="200" onmouseover= "this.src='img/Bonfire Alt.png';" onmouseout= "this.src='img/Bonfire.png';"/></div>
+            <div class="image-container"><img id="bowls" src="img/Singing Bowls.png" height="200" width="200" onmouseover= "this.src='img/Singing Bowls Alt.png';" onmouseout= "this.src='img/Singing Bowls.png';"/></div>
+            </div>
+
+        <div class="row">
+            <div class="image-container"><img id="birds" src="img/Birds.png" height="200" width="200" onmouseover= "this.src='img/Birds Alt.png';" onmouseout= "this.src='img/Birds.png';"/></div>
+            <div class="image-container"><img id="chimes" src="img/Wind Chimes.png" height="200" width="200" onmouseover= "this.src='img/Wind Chimes Alt.png';" onmouseout= "this.src='img/Wind Chimes.png';"/></div>
+            <div class="image-container"><img id="crickets" src="img/Crickets.png" height="200" width="200" onmouseover= "this.src='img/Crickets Alt.png';" onmouseout= "this.src='img/Crickets.png';"/></div>
+        </div>
+		
+        <script>
+            var sound1 = new buzz.sound("sound/Rain.wav");
+            var sound2 = new buzz.sound("sound/Waterfall.wav");
+            var sound3 = new buzz.sound("sound/Breeze.wav");
+            var sound4 = new buzz.sound("sound/Noise.wav");
+            var sound5 = new buzz.sound("sound/Bonfire.wav");
+            var sound6 = new buzz.sound("sound/Singing Bowls.wav");
+            var sound7 = new buzz.sound("sound/Birds.wav");
+            var sound8 = new buzz.sound("sound/Wind Chimes.wav");
+            var sound9 = new buzz.sound("sound/Crickets.wav");
+     
+            window.onload = function() {
+                document.getElementById('rain').addEventListener('mouseover', function () {sound1.play(); });  
+                document.getElementById('waterfall').addEventListener('mouseover', function () {sound2.play(); });
+                document.getElementById('breeze').addEventListener('mouseover', function () {sound3.play(); });
+                document.getElementById('noise').addEventListener('mouseover', function () {sound4.play(); });
+                document.getElementById('fire').addEventListener('mouseover', function () {sound5.play(); }); 
+                document.getElementById('bowls').addEventListener('mouseover', function () {sound6.play(); }); 
+                document.getElementById('birds').addEventListener('mouseover', function () {sound7.play(); }); 
+                document.getElementById('chimes').addEventListener('mouseover', function () {sound8.play(); }); 
+                document.getElementById('crickets').addEventListener('mouseover', function () {sound9.play(); });
+            }  
+        </script>   
+        
+    </body>
+    
+</html>
